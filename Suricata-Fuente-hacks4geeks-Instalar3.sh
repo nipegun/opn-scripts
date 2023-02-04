@@ -19,14 +19,14 @@
 # Vaciarlo
   truncate -s 0 /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml 2> /dev/null
 # Rellenar el archivo
-  echo '<?xml version="1.0"?>'                                                                                         >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '<ruleset documentation_url="http://docs.opnsense.org/">'                                                       >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '    <location url="https://hacks4geeks.com/_/premium/opnsense/suricata/" prefix="hacks4geeks"/>'               >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '    <files>'                                                                                                   >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '        <file description="entrante-no-solicitado">hacks4geeks-entrante-no-solicitado.rules</file>'            >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '        <file description="Custom" url="inline::rules/entrante-no-solicitado.rules">hacks4geeks.rules</file>'  >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '    </files>'                                                                                                  >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '</ruleset>'                                                                                                    >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '<?xml version="1.0"?>'                                                                                                     >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '<ruleset documentation_url="http://docs.opnsense.org/">'                                                                   >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '    <location url="https://hacks4geeks.com/_/premium/opnsense/suricata/rules/" prefix="hacks4geeks"/>'                     >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '    <files>'                                                                                                               >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '        <file description="entrante-no-solicitado">entrante-no-solicitado.rules</file>'                                    >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '        <file description="Custom" url="inline::rules/entrante-no-solicitado.rules">>entrante-no-solicitado.rules</file>'  >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '    </files>'                                                                                                              >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '</ruleset>'                                                                                                                >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
 # 
 service suricata restart
 
