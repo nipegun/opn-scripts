@@ -9,7 +9,7 @@
 #  Script de NiPeGun para instalar reglas personalizadas de suricata en OPNsense
 #
 #  Ejecución remota:
-#  curl -s https://raw.githubusercontent.com/nipegun/opn-scripts/master/Suricata-Reglas-Alertas-Entrante-NoSolicitado-Instalar.sh
+#  curl -s https://raw.githubusercontent.com/nipegun/opn-scripts/master/Suricata-Reglas-Alertas-Entrante-NoSolicitado-Instalar.sh | bash
 # ----------
 
 echo 'alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg: "Detectada conexión ICMP entrante no solicitada"; flow:not_established; sid:5000001; rev:1;)' >> /usr/local/etc/suricata/no-solicitado.rules
