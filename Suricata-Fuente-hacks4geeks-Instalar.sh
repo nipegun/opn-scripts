@@ -9,7 +9,7 @@
 #  Script de NiPeGun para instalar la fuente de hacks4geeks con reglas de suricata para OPNsense
 #
 #  Ejecución remota:
-#  curl -s https://raw.githubusercontent.com/nipegun/opn-scripts/master/Suricata-Reglas-Alertas-Entrante-NoSolicitado-Instalar.sh | bash
+#  curl -s https://raw.githubusercontent.com/nipegun/opn-scripts/main/Suricata-Fuente-hacks4geeks-Instalar.sh | bash
 # ----------
 
 # Crear el directorio
