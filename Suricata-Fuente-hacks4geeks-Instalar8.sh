@@ -24,7 +24,7 @@
   echo '    <location url="https://hacks4geeks.com/_/premium/opnsense/suricata/rules/" prefix="hacks4geeks"/>'                     >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
   echo '    <files>'                                                                                                               >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
   echo '        <file description="entrante-no-solicitado">entrante-no-solicitado.rules</file>'                                    >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '        <file description="Custom" url="inline::rules/hacks4geeks-entrante-no-solicitado.rules">>hacks4geeks-entrante-no-solicitado.rules</file>'  >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+ # echo '        <file description="Custom" url="inline::rules/hacks4geeks-entrante-no-solicitado.rules">>hacks4geeks-entrante-no-solicitado.rules</file>'  >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
   echo '    </files>'                                                                                                              >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
   echo '</ruleset>'                                                                                                                >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
 # 
