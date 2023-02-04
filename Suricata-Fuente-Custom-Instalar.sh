@@ -13,7 +13,7 @@
 # ----------
 
 # Crear el directorio
- mkdir -p /usr/local/opnsense/scripts/suricata/metadata/rules/ 2> /dev/null
+  mkdir -p /usr/local/opnsense/scripts/suricata/metadata/rules/ 2> /dev/null
 # Crear el archivo (por si no está creado)
   touch /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml 2> /dev/null
 # Vaciarlo
@@ -21,7 +21,7 @@
 # Rellenar el archivo
   echo '<?xml version="1.0"?>'                                                               >> /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
   echo '<ruleset documentation_url="http://docs.opnsense.org/">'                             >> /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
-  echo '  <location url="https://www.mydomain.com/suricata/" prefix="Custom"/>'              >> /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
+  echo '  <location url="https://midominio.com/suricata/rules/" prefix="Custom"/>'           >> /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
   echo '  <files>'                                                                           >> /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
   echo '    <file description="custom rules">Custom.rules</file>'                            >> /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
   echo '    <file description="Custom" url="inline::rules/Custom.rules">Custom.rules</file>' >> /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
