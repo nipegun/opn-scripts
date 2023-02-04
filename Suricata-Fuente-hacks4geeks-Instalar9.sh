@@ -13,20 +13,20 @@
 # ----------
 
 # Crear el directorio
- mkdir -p /usr/local/opnsense/scripts/suricata/metadata/rules/ 2> /dev/null
+  mkdir -p /usr/local/opnsense/scripts/suricata/metadata/rules/ 2> /dev/null
 # Crear el archivo (por si no está creado)
   touch /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml 2> /dev/null
 # Vaciarlo
   truncate -s 0 /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml 2> /dev/null
 # Rellenar el archivo
-  echo '<?xml version="1.0"?>'                                                                                             >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '<ruleset documentation_url="http://hacks4geeks.com/reglas-de-suricata-para-opnsense">'                             >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '  <location url="http://hacks4geeks.com/_/premium/opnsense/suricata/rules/" prefix="hacks4geeks"/>'                >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '  <files>'                                                                                                         >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '    <file description="in-no-solicitado">in-no-solicitado.rules</file>'                                            >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '    <file description="Custom" url="inline::rules/h4g-in-no-solicitado.rules">>h4g-in-no-solicitado.rules</file>'  >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '  </files>'                                                                                                        >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-  echo '</ruleset>'                                                                                                        >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
-# 
-service suricata restart
+  echo '<?xml version="1.0"?>'                                                                                        >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '<ruleset documentation_url="http://hacks4geeks.com/reglas-de-suricata-para-opnsense">'                        >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '  <location url="http://hacks4geeks.com/_/premium/opnsense/suricata/rules/" prefix="hacks4geeks"/>'           >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '  <files>'                                                                                                    >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '    <file description="in-no-solicitado">in-no-solicitado.rules</file>'                                       >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '    <file description="hacks4geeks" url="inline::rules/in-no-solicitado.rules">in-no-solicitado.rules</file>' >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '  </files>'                                                                                                   >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+  echo '</ruleset>'                                                                                                   >> /usr/local/opnsense/scripts/suricata/metadata/rules/hacks4geeks.xml
+# Reiniciar el servicio
+  service suricata restart
 
